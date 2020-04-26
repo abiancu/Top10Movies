@@ -39,6 +39,6 @@ select, button, input {
 body{
   
   background-size: cover;
-  background-image: url("https://getreelcinemas.com//wp-content/uploads/2015/02/Background-Narrow.jpg"); 
+  /*(background-image: url("https://getreelcinemas.com//wp-content/uploads/2015/02/Background-Narrow.jpg"); */
   background-size: auto;
   }
