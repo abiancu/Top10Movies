@@ -1,5 +1,6 @@
 const apiKey = '5d576382955ff5829fc3844390db4427';
 const baseAPIUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&sort_by=popularity.desc`;
+const baseAPIUrlGenre = `https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}&language=en-US`
 
 
 
