@@ -1,5 +1,6 @@
 const apiKey = '5d576382955ff5829fc3844390db4427';
 const baseAPIUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&sort_by=popularity.desc`;
+const baseAPIUrlGenre = `https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}&language=en-US`
 
 
 
@@ -54,6 +55,11 @@ function afterDataLoaded(dataObject) {
       - Set the img element's src tag to posterBaseUrl + the poster_path from the result movie
      */
     for (var i = 0; i < dataObject.results.length; i++) {
-        $('#movieImg' + i).attr('src', posterBaseUrl + dataObject.results[i].poster_path);
+        $('#movieImg' + i).attr('src', posterBaseUrl + dataObject.results[i].poster_path);       
+    }
+
+    //get results of movie description
+    for(var i = 0; i < dataObject.results.length; i++){
+      document.getElementById('card-' + i).innerHTML = dataObject.results[i].overview; 
     }
 }
